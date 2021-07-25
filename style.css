@@ -18,18 +18,23 @@ border: 5px solid black;
 header h1{
 
 padding: 50px;
-width: 100%;
+/* width: 100%; */
+
+}
+body{
+
+    background-image: url(1.jpg);
+    width: 100%;
 
 }
 main{
 
-
-    background-image: url(1.jpg);
-
+    padding:30px ;
 }
 #myform {
 
 background-color:blanchedalmond;
+border-radius: 5px;
 width: 25%;
 height: 400px;
 box-sizing: border-box;
@@ -85,6 +90,7 @@ padding-left: 5px;
   #secForm{
 color: black;
 background-color:blanchedalmond;
+border-radius: 5px;
 font-size: larger;
 width: 20%;
 height: 20%;
