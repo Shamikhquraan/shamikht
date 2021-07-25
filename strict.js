@@ -19,11 +19,38 @@ this.image="img/"+cModel+".png";
 
 saveToLocal();
 };
+let trEl=document.createElement('tr');
 
+
+let thE1=document.createElement('th');
+thE1.textContent='LOGO';
+trEl.appendChild(thE1);
+
+let thE2=document.createElement('th');
+thE2.textContent='Car Name';
+trEl.appendChild(thE2);
+
+
+let thE3=document.createElement('th');
+thE3.textContent='Car year';
+trEl.appendChild(thE3);
+
+tableEl.appendChild(trEl);
+tableContainer.appendChild.tableEl;
 
 car.prototype.render=function(){
 
 let trEl=document.createElement('tr');
+
+let displayImage=document.createElement('img');
+displayImage.setAttribute('src', this.image);
+displayImage.setAttribute('width', '80px');
+displayImage.setAttribute('height','40px');
+
+let tdE2 =document.createElement('td');
+tdE2.appendChild(displayImage);
+trEl.appendChild(tdE2);
+
 
 let tdE1=document.createElement('td');
 tdE1.textContent=this.cName;
@@ -33,14 +60,7 @@ let tdE3=document.createElement('td');
 tdE3.textContent=this.cModel;
 trEl.appendChild(tdE3);
 
-let displayImage=document.createElement('img');
-displayImage.setAttribute('src', this.image);
-displayImage.setAttribute('width', 100);
-displayImage.setAttribute('height',100);
 
-let tdE2 =document.createElement('td');
-tdE2.appendChild(displayImage);
-trEl.appendChild(tdE2);
 
 tableEl.appendChild(trEl);
 tableContainer.appendChild(tableEl);
