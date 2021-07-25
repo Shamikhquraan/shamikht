@@ -65,11 +65,11 @@ trEl.appendChild(tdE2);
 
 
 let tdE1=document.createElement('td');
-tdE1.textContent=this.cName;
+tdE1.textContent=this.cModel;
 trEl.appendChild(tdE1);
 
 let tdE3=document.createElement('td');
-tdE3.textContent=this.cModel;
+tdE3.textContent=this.cYear;
 trEl.appendChild(tdE3);
 
 
@@ -112,6 +112,13 @@ for(let i=0 ; i<normalObj.length ; i++){
 }
 
 };
+let btnClear=document.getElementById('secForm');
+btnClear.addEventListener('submit',btnRemove);
+function btnRemove(event){
+// event.preventDefault();
+localStorage.clear();
+};
+
 
 
 function cleaRow(event){

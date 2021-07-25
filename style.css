@@ -33,7 +33,7 @@ background-color:blanchedalmond;
 width: 25%;
 height: 400px;
 box-sizing: border-box;
-margin-right: 15%;
+margin-right: 5%;
 font-size: 20px;
 padding: 20px;
 }
@@ -69,6 +69,8 @@ input[type=text],input[type=number], select {
     background-color: blanchedalmond;
     border: 5px solid black;
     font-size: large;
+    margin-right: 8%;
+    margin-left: 0;
   }
   tr,
   th,
@@ -79,3 +81,14 @@ border: 3px solid black;
 padding: 5px;
 padding-left: 5px;
   }
+
+  #secForm{
+color: black;
+background-color:blanchedalmond;
+font-size: larger;
+width: 20%;
+height: 20%;
+
+  }
+
+ 
