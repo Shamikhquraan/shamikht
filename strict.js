@@ -22,6 +22,10 @@ saveToLocal();
 let trEl=document.createElement('tr');
 
 
+let thE4=document.createElement('th');
+thE4.textContent='X';
+trEl.appendChild(thE4);
+
 let thE1=document.createElement('th');
 thE1.textContent='LOGO';
 trEl.appendChild(thE1);
@@ -38,10 +42,18 @@ trEl.appendChild(thE3);
 tableEl.appendChild(trEl);
 tableContainer.appendChild.tableEl;
 
+let count =0;
 car.prototype.render=function(){
 
 let trEl=document.createElement('tr');
+let tdE5 =document.createElement('td');
+let aEl =document.createElement('a');
+aEl.innerHTML=`<ion-icon id=${count} name="close-circle-outline"></ion-icon>`;
+aEl.addEventListener('click', cleaRow);
+tdE5.appendChild(aEl);
+trEl.appendChild(tdE5);
 
+count++;
 let displayImage=document.createElement('img');
 displayImage.setAttribute('src', this.image);
 displayImage.setAttribute('width', '80px');
@@ -100,5 +112,18 @@ for(let i=0 ; i<normalObj.length ; i++){
 }
 
 };
+
+
+function cleaRow(event){
+// event.preventDefault();
+let newOne=localStorage.getItem('carInLocal');
+newOne=JSON.parse(newOne);
+newOne.splice(Number(event.target.id) , 1);
+newOne=JSON.stringify(newOne);
+localStorage.setItem('carInLocal',newOne);
+location.reload();
+}
+
+
 
 readFromLocal();
